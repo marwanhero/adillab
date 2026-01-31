@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scramble</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <a href="../index.html" class="lang-btn">⬅ Home</a>
+            <div style="text-align:center;">
+                <h1 id="game-title" style="margin:0; font-size:1.5rem;">Word Scramble</h1>
+                <div id="level-indicator" style="font-size:0.9rem; color:#666;">Level 1</div>
+            </div>
+            <button class="lang-btn" onclick="toggleLanguage()">EN</button>
+        </div>
+
+        <div class="game-area">
+            <div id="word-image" class="word-image">🍎</div>
+            <div id="word-container" style="display:flex; justify-content:center; gap:10px; margin-bottom:30px; min-height:80px;"></div>
+            <div id="stars-display" style="color:#FFD700; font-size:1.5rem; letter-spacing:5px; margin-bottom:20px;">☆☆☆</div>
+            <div id="letters-bank" style="display:flex; justify-content:center; flex-wrap:wrap; gap:10px;"></div>
+            
+            <h2 id="feedback-msg" style="height:40px; color:#1034A6; margin-top:20px;"></h2>
+            
+            <div style="margin-top:30px; display:flex; justify-content:center; gap:15px;">
+                <button class="lang-btn" onclick="giveHint()">💡 Hint</button>
+                <button id="next-btn" class="lang-btn hidden" style="background:#1034A6; color:white;" onclick="nextLevel()">Next ➡</button>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/games.js"></script>
+</body>
+</html>

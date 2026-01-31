@@ -1,0 +1,192 @@
+/**
+ * RTL (Right-to-Left) Styles for Arabic
+ * Applies when <html dir="rtl"> or <body class="rtl">
+ */
+
+/* Global RTL Settings */
+html[dir="rtl"],
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Navigation RTL */
+html[dir="rtl"] nav,
+.rtl nav {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-links,
+.rtl .nav-links {
+  flex-direction: row-reverse;
+}
+
+/* Hero Section RTL */
+html[dir="rtl"] .hero-progress-box,
+.rtl .hero-progress-box {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .hero-ctas,
+.rtl .hero-ctas {
+  flex-direction: row-reverse;
+}
+
+/* Services Grid RTL */
+html[dir="rtl"] .services-grid,
+.rtl .services-grid {
+  direction: rtl;
+}
+
+/* Benefits Section RTL */
+html[dir="rtl"] .benefit-row:nth-child(even),
+.rtl .benefit-row:nth-child(even) {
+  flex-direction: row; /* Swap the reversal */
+}
+
+html[dir="rtl"] .benefit-row:nth-child(odd),
+.rtl .benefit-row:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+/* Footer RTL */
+html[dir="rtl"] .footer-links,
+.rtl .footer-links {
+  flex-direction: row-reverse;
+}
+
+/* Game UI RTL */
+html[dir="rtl"] #slots-area,
+.rtl #slots-area {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] #letters-area,
+.rtl #letters-area {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .scrambled-letters,
+.rtl .scrambled-letters {
+  flex-direction: row-reverse;
+}
+
+/* Mode Selector RTL */
+html[dir="rtl"] .game-mode-selector,
+.rtl .game-mode-selector {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .difficulty-selector,
+.rtl .difficulty-selector {
+  flex-direction: row-reverse;
+}
+
+/* Filter Pills RTL */
+html[dir="rtl"] .filter-container,
+.rtl .filter-container {
+  flex-direction: row-reverse;
+}
+
+/* Challenge Cards RTL */
+html[dir="rtl"] .challenge-header,
+.rtl .challenge-header {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .challenge-card::after,
+.rtl .challenge-card::after {
+  left: auto;
+  right: 0;
+  transform: translateX(6px);
+}
+
+html[dir="rtl"] .challenge-card:hover::after,
+.rtl .challenge-card:hover::after {
+  transform: translateX(0);
+}
+
+html[dir="rtl"] .challenge-card:hover,
+.rtl .challenge-card:hover {
+  transform: translateX(-8px);
+}
+
+/* Results Modal RTL */
+html[dir="rtl"] .results-actions,
+.rtl .results-actions {
+  flex-direction: row-reverse;
+}
+
+/* Modal Steps RTL */
+html[dir="rtl"] .modal-steps li,
+.rtl .modal-steps li {
+  padding-right: 50px;
+  padding-left: 0;
+  text-align: right;
+}
+
+html[dir="rtl"] .modal-steps li::before,
+.rtl .modal-steps li::before {
+  right: 0;
+  left: auto;
+}
+
+/* Timer and Score RTL Positioning */
+html[dir="rtl"] .game-timer,
+.rtl .game-timer {
+  right: auto;
+  left: 20px;
+}
+
+html[dir="rtl"] .score-display,
+.rtl .score-display {
+  left: auto;
+  right: 20px;
+}
+
+/* Arabic Font Optimization */
+html[lang="ar"] {
+  font-family: 'Tajawal', 'Cairo', 'Amiri', sans-serif;
+}
+
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3 {
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+html[lang="ar"] .hero-title {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  line-height: 1.4;
+}
+
+/* Ensure numbers display correctly in RTL */
+html[dir="rtl"] .timer-value,
+html[dir="rtl"] .score-value,
+html[dir="rtl"] .progress-text,
+.rtl .timer-value,
+.rtl .score-value,
+.rtl .progress-text {
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+/* Icon positioning in RTL */
+html[dir="rtl"] .nav-brand,
+.rtl .nav-brand {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .challenge-status,
+.rtl .challenge-status {
+  flex-direction: row-reverse;
+}
+
+/* Mobile RTL Adjustments */
+ @media (max-width: 768px) {
+  html[dir="rtl"] .hero-progress-box,
+  .rtl .hero-progress-box {
+    flex-direction: column;
+  }
+}

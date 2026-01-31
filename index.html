@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AdilLab - Master spelling with confidence through interactive games, video tutorials, and creative learning activities.">
+    <meta name="theme-color" content="#FF9E2A">
+    <title>AdilLab | Master Spelling with Confidence</title>
+    
+    <!-- Add Arabic font support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/landing.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Lucide Icons Library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Inline styles for language switcher in landing nav -->
+    <style>
+        /* Specific override for landing page nav integration */
+        .nav-links {
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ====================
+         NAVIGATION HEADER
+         ==================== -->
+    <nav role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-brand" aria-label="AdilLab Home">
+            <img src="assets/images/Logo.png" alt="AdilLab Logo" data-i18n-alt="logo_alt">
+            <span data-i18n="nav_brand">AdilLab</span>
+        </a>
+        <div class="nav-links">
+            <div class="lang-select-wrapper">
+                <i data-lucide="globe" size="18" color="#666"></i>
+                <select onchange="window.setLanguage(this.value)" id="lang-selector" class="lang-dropdown" style="border: none; background: transparent; font-weight: 700; color: var(--text); outline: none; font-size: 0.9rem; cursor: pointer;">
+                    <option value="fr">Français (FR)</option>
+                    <option value="en">English (EN)</option>
+                    <option value="ar">العربية (AR)</option>
+                </select>
+            </div>
+            <a href="#services" class="nav-link" data-i18n="nav_features">Features</a>
+            <a href="#benefits" class="nav-link" data-i18n="nav_benefits">Benefits</a>
+            <a href="#services" class="btn btn-primary" aria-label="Start playing Speech Safari" data-i18n="nav_start">Start Playing</a>
+        </div>
+    </nav>
+
+    <!-- ====================
+         HERO SECTION WITH XP PROGRESS
+         ==================== -->
+    <header class="hero" role="banner">
+        <!-- Animated Background Shapes -->
+        <div class="hero-shapes" aria-hidden="true">
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
+            <div class="shape-3"></div>
+        </div>
+        
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="hero-title" data-i18n="hero_title">
+                Master Spelling with <span class="highlight">Confidence</span>
+            </h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
+                An interactive adventure for kids to learn reading, spelling, and phonics through play. Scientifically designed, wonderfully fun.
+            </p>
+            
+            <!-- INTEGRATED XP PROGRESS RING -->
+            <div class="hero-progress-box" data-aos="fade-up" data-aos-delay="300">
+                <div class="progress-container" role="img" aria-label="Learning progress indicator">
+                    <svg width="110" height="110" aria-hidden="true">
+                        <!-- Background Circle -->
+                        <circle 
+                            stroke="#e0e0e0" 
+                            stroke-width="8" 
+                            fill="transparent" 
+                            r="46" 
+                            cx="55" 
+                            cy="55"
+                        />
+                        <!-- Progress Circle (Dynamically Updated) -->
+                        <circle 
+                            id="progress-ring-circle" 
+                            class="progress-ring__circle" 
+                            stroke="#FF9E2A" 
+                            stroke-width="8" 
+                            fill="transparent" 
+                            r="46" 
+                            cx="55" 
+                            cy="55" 
+                            stroke-dasharray="289.03" 
+                            stroke-dashoffset="289.03" 
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                    <div class="progress-text">
+                        <span id="xp-display" aria-live="polite">0 XP</span>
+                    </div>
+                </div>
+                
+                <div class="progress-stats">
+                    <div id="streak-badge" class="streak-badge" aria-live="polite">
+                        0 Day Streak 🔥
+                    </div>
+                    <div class="progress-label" data-i18n="hero_progress_label">Leveling Progress</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ====================
+         SERVICES/FEATURES GRID
+         ==================== -->
+    <main id="main-content">
+        <section id="services" class="services-section" aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title" class="section-title" data-aos="fade-up" data-i18n="services_title">
+                    Your Jungle Tools
+                </h2>
+                
+                <div class="services-grid">
+                    <!-- Living Letters Game -->
+                    <a 
+                        href="pages/games.html" 
+                        class="service-card" 
+                        data-aos="fade-up" 
+                        data-aos-delay="100"
+                        aria-label="Play Living Letters spelling game"
+                    >
+                        <div class="service-icon" style="background: var(--primary);">
+                            <i data-lucide="gamepad-2" size="38" aria-hidden="true"></i>
+                        </div>
+                        <h3 data-i18n="service_letters_title">Living Letters</h3>
+                        <p data-i18n="service_letters_desc">Interactive spelling games with real audio feedback and confetti rewards.</p>
+                    </a>
+
+                    <!-- Video Tutorials -->
+                    <a 
+                        href="pages/video_tutorials.html" 
+                        class="service-card" 
+                        data-aos="fade-up" 
+                        data-aos-delay="200"
+                        aria-label="Watch phonics video tutorials"
+                    >
+                        <div class="service-icon" style="background: var(--secondary);">
+                            <i data-lucide="video" size="38" aria-hidden="true"></i>
+                        </div>
+                        <h3 data-i18n="service_videos_title">Video Jungle</h3>
+                        <p data-i18n="service_videos_desc">Curated phonics and reading lessons for all skill levels.</p>
+                    </a>
+
+                    <!-- Ideas & Mnemonics -->
+                    <a 
+                        href="pages/ideas_mnemonics.html" 
+                        class="service-card" 
+                        data-aos="fade-up" 
+                        data-aos-delay="300"
+                        aria-label="Explore creative learning ideas and mnemonics"
+                    >
+                        <div class="service-icon" style="background: var(--accent);">
+                            <i data-lucide="lightbulb" size="38" aria-hidden="true"></i>
+                        </div>
+                        <h3 data-i18n="service_ideas_title">Idea Camp</h3>
+                        <p data-i18n="service_ideas_desc">Creative offline activities and memory tricks for kids and parents.</p>
+                    </a>
+
+                    <!-- Missing Letters Game -->
+                    <a href="pages/missing_letters.html" class="service-card" data-aos="fade-up" data-aos-delay="350">
+                        <div class="service-icon" style="background: #4CAF50;">
+                            <i data-lucide="spell-check" size="38"></i>
+                        </div>
+                        <h3 data-i18n="missing_letters_title">Missing Letters</h3>
+                        <p data-i18n="missing_letters_desc">Fill in the blanks to complete the word and hear it spoken!</p>
+                    </a>
+
+                    <!-- Word Hunt Game -->
+                    <a href="pages/word_hunt.html" class="service-card" data-aos="fade-up" data-aos-delay="375">
+                        <div class="service-icon" style="background: #8BC34A;">
+                            <i data-lucide="grid" size="38"></i>
+                        </div>
+                        <h3 data-i18n="word_hunt_title">Word Hunt</h3>
+                        <p data-i18n="word_hunt_desc">Find hidden words in the jungle grid before time runs out!</p>
+                    </a>
+
+                    <!-- Daily Challenges -->
+                    <a 
+                        href="pages/challenges.html" 
+                        class="service-card" 
+                        data-aos="fade-up" 
+                        data-aos-delay="400"
+                        aria-label="Take on daily spelling challenges"
+                    >
+                        <div class="service-icon" style="background: #FF6B6B;">
+                            <i data-lucide="trophy" size="38" aria-hidden="true"></i>
+                        </div>
+                        <h3 data-i18n="service_challenges_title">Daily Quest</h3>
+                        <p data-i18n="service_challenges_desc">Track milestones, maintain streaks, and earn achievement badges.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================
+             BENEFITS SECTION
+             ==================== -->
+        <section id="benefits" class="benefits-section" aria-labelledby="benefits-title">
+            <div class="container">
+                <h2 id="benefits-title" class="sr-only" data-i18n="nav_benefits">Benefits of AdilLab</h2>
+                
+                <!-- Benefit 1: Scientific Methods -->
+                <div class="benefit-row" data-aos="fade-right">
+                    <div class="benefit-text">
+                        <h3 data-i18n="benefit_1_title">Scientifically Proven Methods</h3>
+                        <p data-i18n="benefit_1_desc">
+                            We use multisensory learning techniques—visual, auditory, and kinesthetic—to help words stick in long-term memory. Every activity is backed by research in child development and literacy education.
+                        </p>
+                    </div>
+                    <div class="benefit-graphic" aria-label="Brain science illustration">
+                        <i data-lucide="brain-circuit" size="130" color="#d0d0d0" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <!-- Benefit 2: Safe Environment -->
+                <div class="benefit-row" data-aos="fade-left">
+                    <div class="benefit-text">
+                        <h3 data-i18n="benefit_2_title">Safe & Ad-Free</h3>
+                        <p data-i18n="benefit_2_desc">
+                            A protected environment designed specifically for children. No distracting ads, no data collection, no in-app purchases. Just pure learning focus in a COPPA-compliant space.
+                        </p>
+                    </div>
+                    <div class="benefit-graphic" aria-label="Security shield illustration">
+                        <i data-lucide="shield-check" size="130" color="#d0d0d0" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <!-- Benefit 3: Progress Tracking -->
+                <div class="benefit-row" data-aos="fade-right">
+                    <div class="benefit-text">
+                        <h3 data-i18n="benefit_3_title">Track Every Milestone</h3>
+                        <p data-i18n="benefit_3_desc">
+                            Visual progress dashboards, achievement badges, and customizable goals keep learners motivated. Parents get insights to celebrate wins together and identify areas for growth.
+                        </p>
+                    </div>
+                    <div class="benefit-graphic" aria-label="Progress tracking illustration">
+                        <i data-lucide="trending-up" size="130" color="#d0d0d0" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ====================
+         FOOTER
+         ==================== -->
+    <footer style="background: #2D3748; color: white; padding: 80px 20px 40px; border-top: 5px solid var(--primary);">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: start;">
+            
+            <div class="footer-profile" style="text-align: center;">
+                <div style="position: relative; display: inline-block; margin-bottom: 25px;">
+                    <img src="assets/images/Adil.jpeg" alt="Adil BK" class="high-res-profile" onerror="this.src='https://via.placeholder.com/140?text=Adil+BK'">
+                    <div style="position: absolute; bottom: 8px; right: 8px; background: var(--accent); width: 22px; height: 22px; border-radius: 50%; border: 3px solid #2D3748;"></div>
+                </div>
+                <h3 style="color: var(--primary); margin: 0 0 10px 0; font-size: 1.8rem;">Adil BK</h3>
+                <p data-i18n="footer_adil_bio" style="font-size: 0.95rem; line-height: 1.6; color: #A0AEC0; max-width: 350px; margin: 0 auto;"></p>
+            </div>
+
+            <div class="footer-mission">
+                <h4 style="color: white; border-bottom: 2px solid var(--secondary); display: inline-block; padding-bottom: 5px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="footer_mission_title">Notre Mission</h4>
+                <p data-i18n="footer_mission_text" style="font-size: 1rem; line-height: 1.8; color: #cbd5e0;"></p>
+            </div>
+
+            <div class="footer-contact">
+                <h4 style="color: white; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="footer_contact_title">Contactez-nous</h4>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                    <a href="https://www.instagram.com/adil___bour?igsh=MXFrNXN5bTB5bWY1eg==" target="_blank" class="social-link instagram">
+                        <i data-lucide="instagram"></i> <span>Instagram</span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61554610582358" target="_blank" class="social-link facebook">
+                        <i data-lucide="facebook"></i> <span>Facebook</span>
+                    </a>
+                    <a href="https://wa.me/212600000000" target="_blank" class="social-link whatsapp">
+                        <i data-lucide="message-circle"></i> <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:adilbourkabi72@gmail.com" class="social-link gmail">
+                        <i data-lucide="mail"></i> <span>Gmail</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #4A5568; font-size: 0.85rem; color: #718096;">
+            <p>&copy; 2026 AdilLab. Créé par <strong>Adil BK</strong> | Étudiant à l'OFPPT CFJ AL KARIA SALE.</p>
+        </div>
+    </footer>
+
+    <!-- ====================
+         SCRIPTS
+         ==================== -->
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Dashboard Logic (XP/Streak from localStorage) -->
+    <script src="assets/js/dashboard.js"></script>
+    
+    <!-- i18n System -->
+    <script src="assets/js/i18n.js"></script>
+    
+    <!-- Initialize Libraries -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 900,
+            once: true,
+            offset: 120,
+            easing: 'ease-out-cubic'
+        });
+        
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - navHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

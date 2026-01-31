@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelling Success</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <h1>Spelling Success</h1>
+            <div class="lang-switcher">
+                <!-- Simple static buttons for now, logic handled in pages usually or could be added here -->
+                <button class="lang-btn">Start</button>
+            </div>
+        </header>
+
+        <main class="nav-grid">
+            <a href="pages/games.html" class="nav-card">
+                <i data-lucide="gamepad-2"></i>
+                <h2>Games</h2>
+            </a>
+            <a href="pages/video_tutorials.html" class="nav-card">
+                <i data-lucide="video"></i>
+                <h2>Videos</h2>
+            </a>
+            <a href="pages/ideas_mnemonics.html" class="nav-card">
+                <i data-lucide="lightbulb"></i>
+                <h2>Ideas</h2>
+            </a>
+            <a href="pages/challenges.html" class="nav-card">
+                <i data-lucide="trophy"></i>
+                <h2>Challenges</h2>
+            </a>
+        </main>
+    </div>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

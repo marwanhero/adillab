@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Video Jungle - Curated educational videos for phonics and reading">
+    <title>Video Jungle | AdilLab</title>
+    
+    <!-- Add Arabic font support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/theme.css">
+    <link rel="stylesheet" href="../assets/css/landing.css">
+    <link rel="stylesheet" href="../assets/css/modules.css">
+    <link rel="stylesheet" href="../assets/css/rtl.css">
+    
+    <!-- Icon Library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="module-nav secondary-border" role="navigation" aria-label="Video tutorials navigation">
+        <a href="../index.html" class="nav-brand" aria-label="Return to AdilLab home">
+            <img src="../assets/images/Logo.png" alt="AdilLab Logo" data-i18n-alt="logo_alt">
+            <span data-i18n="nav_brand">AdilLab</span>
+        </a>
+        <div style="display: flex; gap: 15px; align-items: center;">
+            <!-- Language Switcher -->
+            <div class="lang-select-wrapper" style="display: flex; align-items: center; gap: 5px;">
+                <i data-lucide="globe" size="18" color="#666"></i>
+                <select onchange="window.setLanguage(this.value)" id="lang-selector" class="lang-dropdown" style="border: 1px solid #ccc; padding: 5px; border-radius: 5px; background: white; color: #333;">
+                    <option value="fr">Français (FR)</option>
+                    <option value="en">English (EN)</option>
+                    <option value="ar">العربية (AR)</option>
+                </select>
+            </div>
+
+            <a href="../index.html" class="btn btn-secondary" aria-label="Return home">
+                <i data-lucide="home" size="18" aria-hidden="true"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="module-content">
+        <h1 class="module-title" style="color: var(--secondary);" data-i18n="service_videos_title">
+            Video Jungle
+        </h1>
+        <p class="module-subtitle" data-i18n="service_videos_desc">
+            Curated educational videos to master phonics, blending, and reading rules
+        </p>
+
+        <!-- Category Filters -->
+        <div class="filter-container" role="group" aria-label="Filter videos by category">
+            <button 
+                class="pill active" 
+                onclick="filterVideos('all')" 
+                aria-pressed="true"
+                data-category="all"
+                data-i18n="videos_all"
+            >
+                All Videos
+            </button>
+            <button 
+                class="pill" 
+                onclick="filterVideos('phonics')"
+                aria-pressed="false"
+                data-category="phonics"
+                data-i18n="videos_phonics"
+            >
+                Phonics
+            </button>
+            <button 
+                class="pill" 
+                onclick="filterVideos('reading')"
+                aria-pressed="false"
+                data-category="reading"
+                data-i18n="videos_reading"
+            >
+                Reading
+            </button>
+            <button 
+                class="pill" 
+                onclick="filterVideos('blending')"
+                aria-pressed="false"
+                data-category="blending"
+                data-i18n="videos_blending"
+            >
+                Blending
+            </button>
+        </div>
+
+        <!-- Video Grid (Uses landing page grid system) -->
+        <div 
+            id="vid-grid" 
+            class="services-grid container"
+            role="list"
+            aria-label="Educational videos"
+        >
+            <!-- Dynamically populated by videoTutorials.js -->
+        </div>
+    </main>
+
+    <footer style="background: #2D3748; color: white; padding: 80px 20px 40px; border-top: 5px solid var(--primary);">
+        <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; align-items: start;">
+            
+            <div class="footer-profile" style="text-align: center;">
+                <div style="position: relative; display: inline-block; margin-bottom: 25px;">
+                    <img src="../assets/images/Adil.jpeg" alt="Adil BK" class="high-res-profile" onerror="this.src='https://via.placeholder.com/140?text=Adil+BK'">
+                    <div style="position: absolute; bottom: 8px; right: 8px; background: var(--accent); width: 22px; height: 22px; border-radius: 50%; border: 3px solid #2D3748;"></div>
+                </div>
+                <h3 style="color: var(--primary); margin: 0 0 10px 0; font-size: 1.8rem;">Adil BK</h3>
+                <p data-i18n="footer_adil_bio" style="font-size: 0.95rem; line-height: 1.6; color: #A0AEC0; max-width: 350px; margin: 0 auto;"></p>
+            </div>
+
+            <div class="footer-mission">
+                <h4 style="color: white; border-bottom: 2px solid var(--secondary); display: inline-block; padding-bottom: 5px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="footer_mission_title">Notre Mission</h4>
+                <p data-i18n="footer_mission_text" style="font-size: 1rem; line-height: 1.8; color: #cbd5e0;"></p>
+            </div>
+
+            <div class="footer-contact">
+                <h4 style="color: white; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px;" data-i18n="footer_contact_title">Contactez-nous</h4>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                    <a href="https://www.instagram.com/VOTRE_PROFIL" target="_blank" class="social-link instagram">
+                        <i data-lucide="instagram"></i> <span>Instagram</span>
+                    </a>
+                    <a href="https://www.facebook.com/VOTRE_PROFIL" target="_blank" class="social-link facebook">
+                        <i data-lucide="facebook"></i> <span>Facebook</span>
+                    </a>
+                    <a href="https://wa.me/212600000000" target="_blank" class="social-link whatsapp">
+                        <i data-lucide="message-circle"></i> <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:votre.email@gmail.com" class="social-link gmail">
+                        <i data-lucide="mail"></i> <span>Gmail</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #4A5568; font-size: 0.85rem; color: #718096;">
+            <p>&copy; 2026 AdilLab. Créé par <strong>Adil BK</strong> | Étudiant à l'OFPPT CFJ AL KARIA SALE;</p>
+        </div>
+    </footer>
+
+    <!-- i18n System -->
+    <script src="../assets/js/i18n.js"></script>
+
+    <!-- Initialize -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="../assets/js/videoTutorials.js"></script>
+</body>
+</html>

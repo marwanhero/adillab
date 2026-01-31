@@ -1,0 +1,26 @@
+:root {
+  --primary: #FF9E2A; /* Orange */
+  --secondary: #4AC8C8; /* Teal */
+  --accent: #9D4AC8; /* Purple */
+  --bg: #FFFBF0; /* Cream */
+  --text: #2D3748;
+  --font: "Comic Sans MS", "Chalkboard SE", sans-serif;
+  --radius: 25px;
+  --shadow: 0 8px 0px rgba(0,0,0,0.1);
+}
+body { background: var(--bg); font-family: var(--font); color: var(--text); margin: 0; }
+a { text-decoration: none; }
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+.hidden { display: none !important; }
+
+/* Shared Header */
+.module-header {
+  background: white; border-radius: var(--radius); padding: 20px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 5px solid var(--primary); margin-bottom: 30px;
+}
+.btn {
+  background: white; border: 2px solid var(--primary); color: var(--primary);
+  padding: 10px 20px; border-radius: 50px; font-weight: bold; cursor: pointer;
+}
+.btn:hover { background: var(--primary); color: white; }

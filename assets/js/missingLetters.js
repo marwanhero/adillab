@@ -1,4 +1,4 @@
-import { wordBank, getRandomWord } from '/assets/data/wordBank.js';
+import { wordBank, getRandomWord } from '../data/wordBank.js';
 
 // Game State
 let currentDifficulty = 'beginner';

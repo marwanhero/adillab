@@ -1,4 +1,4 @@
-import { wordBank, getRandomWord, getMixedWords } from '/assets/data/wordBank.js';
+import { wordBank, getRandomWord, getMixedWords } from '../data/wordBank.js';
 
 // Game Constants
 const GRID_SIZE = 6;

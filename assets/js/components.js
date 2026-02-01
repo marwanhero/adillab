@@ -46,4 +46,4 @@ function loadGlobalComponents() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', loadGlobalComponents);
+document.addEventListener('DOMContentLoaded', () => { loadGlobalComponents(); });

@@ -7,7 +7,7 @@ const ideasLibrary = [
     {
         id: 1,
         title: { en: "Sand Tracing", fr: "Traçage dans le sable", ar: "الكتابة على الرمل" },
-        img: "../assets/images/sand.png",
+        img: "/assets/images/sand.png",
         summary: { en: "Tactile learning for memory.", fr: "Apprentissage tactile.", ar: "التعلم عن طريق اللمس." },
         steps: {
             en: ["Pour sand or salt into a tray.", "Say a word out loud.", "Have the child write it with their finger.", "Shake the tray to erase!"],
@@ -19,7 +19,7 @@ const ideasLibrary = [
     {
         id: 2,
         title: { en: "Lego Spelling", fr: "Orthographe Lego", ar: "تهجئة الليجو" },
-        img: "../assets/images/lego.png",
+        img: "/assets/images/lego.png",
         summary: { en: "Build words brick by brick.", fr: "Construisez brique par brique.", ar: "ابنِ الكلمات مكعباً بمكعب." },
         steps: {
             en: ["Write letters on Lego bricks.", "Mix them up.", "Call out a word.", "The child snaps them together."],
@@ -31,7 +31,7 @@ const ideasLibrary = [
     {
         id: 3,
         title: { en: "Sky Writing", fr: "Écriture céleste", ar: "الكتابة في الهواء" },
-        img: "../assets/images/sky.png",
+        img: "/assets/images/sky.png",
         summary: { en: "Big movements for big memory.", fr: "Grands mouvements.", ar: "حركات كبيرة للذاكرة." },
         steps: {
             en: ["Stand up and lock your elbow.", "Write the word in the air with big arm movements.", "Say each letter out loud.", "Imagine the letters are glowing!"],
@@ -43,7 +43,7 @@ const ideasLibrary = [
     {
         id: 4,
         title: { en: "Jump Phonics", fr: "Sauter les Sons", ar: "قفز الحروف" },
-        img: "../assets/images/jump.png",
+        img: "/assets/images/jump.png",
         summary: { en: "Active energy for active minds.", fr: "Énergie active.", ar: "طاقة نشطة." },
         steps: {
             en: ["Place letter cards on the floor.", "Shout a sound.", "The child jumps onto the correct letter.", "Chain jumps together!"],

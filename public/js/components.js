@@ -5,7 +5,7 @@ function loadGlobalComponents() {
             <div class="footer-profile" style="text-align: center;">
                 <div style="position: relative; display: inline-block; margin-bottom: 25px;">
                     <img src="/images/adil.jpeg" alt="Adil BK" 
-                         style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 4px solid var(--primary);"
+                         style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%;"
                          onerror="this.src='https://via.placeholder.com/120?text=Adil+BK'">
                 </div>
                 <h3 style="color: var(--primary); margin: 0 0 10px 0; font-size: 1.6rem;">Adil BK</h3>

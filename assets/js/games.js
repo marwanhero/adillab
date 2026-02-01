@@ -1,4 +1,4 @@
-import { wordBank } from '../data/wordBank.js';
+import { wordBank } from '/assets/data/wordBank.js';
 
 // Flatten word bank for sequential play
 const dictionary = [

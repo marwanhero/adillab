@@ -1,6 +1,8 @@
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
-    { "source": "/pages/:path*", "destination": "/pages/:path*.html" }
+    { "source": "/pages/:path*", "destination": "/pages/:path*.html" },
+    { "source": "/assets/data/:path*", "destination": "/assets/data/:path*" }
   ]
 }

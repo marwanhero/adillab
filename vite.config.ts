@@ -4,10 +4,10 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  publicDir: 'public',
   build: {
     rollupOptions: {
       input: {
-        // This maps your URLs to the actual physical files
         main: resolve(__dirname, 'index.html'),
         games: resolve(__dirname, 'pages/games.html'),
         missing_letters: resolve(__dirname, 'pages/missing_letters.html'),

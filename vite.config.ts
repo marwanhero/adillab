@@ -1,7 +1,20 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        games: resolve(__dirname, 'pages/games.html'),
+        missing_letters: resolve(__dirname, 'pages/missing_letters.html'),
+        word_hunt: resolve(__dirname, 'pages/word_hunt.html'),
+        video_tutorials: resolve(__dirname, 'pages/video_tutorials.html'),
+        ideas_mnemonics: resolve(__dirname, 'pages/ideas_mnemonics.html'),
+        challenges: resolve(__dirname, 'pages/challenges.html'),
+      },
+    },
+  },
+});
